@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h3>Bank App</h3>
+        <button id="acc" class="btn btn-primary">Accounts</button>
+        <button id="addAcc" class="btn btn-primary">Add Account</button>
+        <button id="editDeleteAcc" class="btn btn-primary">Edit/Delete</button>
+    </div>
+
+    <div class="container-fluid">
+        <div id="mainRow" class="row">
+            <div class="col-8 offset-2">
+                <h4 class="display-4">Accounts</h4>
+                <div class="row">
+                    <div class="col-10 offset-1">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Deposit</th>
+                                    <th>Credit card</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+    
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="addForm" class="container">
+            <div class="row">
+                <div class="col-10 offset-1">
+                    <h4 class="display-4">Add Account</h4>
+                    <div class="row">
+                        <div class="col-10 offset-1">
+                            <form action="/save" method="POST">
+                                <input id="firstName" type="text" name="first_name" placeholder="first name" class="form-control"><br>
+                                <input id="lastName" type="text" name="last_name" placeholder="last name" class="form-control"><br>
+                                <input id="deposit" type="text" name="deposit" placeholder="deposit" class="form-control"><br>
+                                <input id="card" type="text" name="card" placeholder="card" class="form-control"><br>
+                                <button id="saveBtn" class="btn btn-primary form-control">Save</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="editDeleteRow" class="row">
+            <div class="col-8 offset-2">
+                <h4 class="display-4">Edit/Delete Accounts</h4>
+                <div class="row">
+                    <div class="col-10 offset-1">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Deposit</th>
+                                    <th>Credit card</th>
+                                    <th>Edit</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody2">
+    
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="editForm" class="container">
+            <div id="accountEdit" class="row">
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
